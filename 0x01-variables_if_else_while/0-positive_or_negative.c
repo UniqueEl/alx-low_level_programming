@@ -1,17 +1,25 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main-program entry point.
  * Return:0-no error,non zero value if error.
  **/
 int main(void)
 {
-	char i;
+	int n;
 
-	for (i = 'a'; i <= 'z'; i++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n >  0)
 	{
-		putchar(i);
+		printf("%d is positive\n", n);
 	}
-	putchar('\n');
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	else if (n == 0)
+		printf("%d is zero\n", n);
 	return (0);
 }
