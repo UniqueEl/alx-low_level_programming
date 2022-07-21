@@ -1,0 +1,1 @@
+staticlibraries
